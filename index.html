@@ -280,10 +280,10 @@
                     <div class="glass-card mb-4">
                         <h3 class="section-title mb-3">Dimensional Matrix</h3>
                         <div class="dimension-selector-vertical">
-                            <div class="dimension-option active" data-ratio="1:1" data-size="1024x1024">
-                                <div class="ratio-preview square"></div>
+                            <div class="dimension-option" data-ratio="9:16" data-size="1080x1920">
+                                <div class="ratio-preview portrait"></div>
                                 <div class="dimension-info">
-                                    <span>Square</span>
+                                    <span>Portrait</span>
                                 </div>
                             </div>
                             <div class="dimension-option" data-ratio="16:9" data-size="1920x1080">
@@ -292,10 +292,10 @@
                                     <span>Landscape</span>
                                 </div>
                             </div>
-                            <div class="dimension-option" data-ratio="9:16" data-size="1080x1920">
-                                <div class="ratio-preview portrait"></div>
+                            <div class="dimension-option active" data-ratio="1:1" data-size="1024x1024">
+                                <div class="ratio-preview square"></div>
                                 <div class="dimension-info">
-                                    <span>Portrait</span>
+                                    <span>Square</span>
                                 </div>
                             </div>
                             <div class="dimension-option" data-ratio="4:3" data-size="1536x1152">
@@ -322,6 +322,13 @@
                             <button class="btn-action-long" id="upload-images-btn">
                                 <span>📤 Upload Images</span>
                             </button>
+                        </div>
+                        
+                        <!-- Reference Images Thumbnails -->
+                        <div class="reference-images-container" id="reference-images-container" style="display: none;">
+                            <div class="reference-images-grid" id="reference-images-grid">
+                                <!-- Thumbnails will be added here dynamically -->
+                            </div>
                         </div>
                     </div>
 
@@ -418,9 +425,9 @@
                     </div>
                 </div>
             </div>
-<br/>
-<br/>
-<br/>
+            <br/>
+            <br/>
+            <br/>
             <!-- Image Generation Tips -->
             <div class="glass-panel" style="padding: 30px;">
                 <h3 style="color: var(--secondary-neon); margin-bottom: 20px; text-align: center;">
@@ -467,7 +474,234 @@
                     Transform your ideas into stunning video content with AI precision
                 </p>
             </div>
+    <!-- Video Models Panel - 2x5 Grid -->
+    <section class="section" style="padding-top: 0; padding-bottom: 30px;">
+        <div class="container">
+            <div class="glass-card mb-4">
+                <h3 class="section-title mb-3">Video Models Panel</h3>
+                <div class="models-grid-2x5">
+                    <div class="model-card active" data-model="video-model-1">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 1">
+                        <div class="model-name">Video Model 1</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-2">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 2">
+                        <div class="model-name">Video Model 2</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-3">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 3">
+                        <div class="model-name">Video Model 3</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-4">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 4">
+                        <div class="model-name">Video Model 4</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-5">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 5">
+                        <div class="model-name">Video Model 5</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-6">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 6">
+                        <div class="model-name">Video Model 6</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-7">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 7">
+                        <div class="model-name">Video Model 7</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-8">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 8">
+                        <div class="model-name">Video Model 8</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-9">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 9">
+                        <div class="model-name">Video Model 9</div>
+                    </div>
+                    <div class="model-card" data-model="video-model-10">
+                        <img src="assets/models/placeholder.jpg" alt="Video Model 10">
+                        <div class="model-name">Video Model 10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Main Content -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="image-generation-layout">
+                <!-- Left Column: Generation Controls -->
+                <div class="generation-controls">
+
+                    <!-- Dimensional Matrix Panel -->
+                    <div class="glass-card mb-4">
+                        <h3 class="section-title mb-3">Dimensional Matrix</h3>
+                        <div class="dimension-selector-vertical">
+                            <div class="dimension-option" data-ratio="9:16" data-size="1080x1920">
+                                <div class="ratio-preview portrait"></div>
+                                <div class="dimension-info">
+                                    <span>Portrait</span>
+                                </div>
+                            </div>
+                            <div class="dimension-option" data-ratio="16:9" data-size="1920x1080">
+                                <div class="ratio-preview landscape"></div>
+                                <div class="dimension-info">
+                                    <span>Landscape</span>
+                                </div>
+                            </div>
+                            <div class="dimension-option active" data-ratio="1:1" data-size="1024x1024">
+                                <div class="ratio-preview square"></div>
+                                <div class="dimension-info">
+                                    <span>Square</span>
+                                </div>
+                            </div>
+                            <div class="dimension-option" data-ratio="4:3" data-size="1536x1152">
+                                <div class="ratio-preview classic"></div>
+                                <div class="dimension-info">
+                                    <span>Classic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prompt Input -->
+                    <div class="glass-card mb-4">
+                        <h3 class="section-title mb-3">Neural Prompt Interface</h3>
+                        <div class="prompt-container">
+                            <textarea id="prompt-input" class="prompt-input" placeholder="Describe your animation..."></textarea>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="prompt-action-buttons">
+                            <button class="btn-action-long" id="start-frame-btn">
+                                <span>🎬 Start Frame</span>
+                            </button>
+                            <button class="btn-action-long disabled" id="end-frame-btn" disabled>
+                                <span>🎬 End Frame</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Frame Images Display -->
+                        <div class="frame-images-container">
+                            <div class="frame-image-item" id="start-frame-container" style="display: none;">
+                                <div class="frame-thumbnail" id="start-frame-thumbnail"></div>
+                            </div>
+                            <div class="frame-image-item" id="end-frame-container" style="display: none;">
+                                <div class="frame-thumbnail" id="end-frame-thumbnail"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <div class="generation-action">
+                        <button class="neon-button credits-display-btn" id="credits-display-btn">
+                            <span>Credits: 12,000</span>
+                        </button>
+                        <button class="neon-button generate-btn" id="generate-btn">
+                            <span class="btn-text">🚀 Render <span style="color: #ff4444; font-size: 0.85em; margin-left: 5px;">-10</span></span>
+                            <span class="btn-loading" style="display: none;">⚡ Rendering...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Recent Generations -->
+                <div class="recent-generations">
+                    <div class="glass-card">
+                        <h3 class="section-title mb-3">Recent Generations</h3>
+                        <div class="generations-grid" id="video-generations-grid">
+                            <!-- Video generation 1 -->
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <video controls loop style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                        <source src="assets/portrait.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">ring rotates around space ship</p>
+                                    <div class="generation-meta">
+                                        <span>Video Model 1</span>
+                                        <span>2 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video generation 2 -->
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <video controls loop style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                        <source src="assets/portrait.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">Abstract cosmic animation with vibrant colors</p>
+                                    <div class="generation-meta">
+                                        <span>Video Model 3</span>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video generation 3 -->
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <video controls loop style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                        <source src="assets/portrait.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">Cyberpunk city with neon lights at night</p>
+                                    <div class="generation-meta">
+                                        <span>Video Model 5</span>
+                                        <span>12 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video generation 4 -->
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <video controls loop style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                        <source src="assets/portrait.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">Smooth camera fly through futuristic corridor</p>
+                                    <div class="generation-meta">
+                                        <span>Video Model 2</span>
+                                        <span>18 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
             <!-- Video Generation Tips -->
             <div class="glass-panel" style="padding: 30px;">
                 <h3 style="color: var(--secondary-neon); margin-bottom: 20px; text-align: center;">
@@ -821,6 +1055,223 @@
         </div>
     </div>
 
+    <!-- Upload Images Modal -->
+    <div class="upload-modal" id="uploadModal" style="display: none;">
+        <div class="upload-modal-overlay" onclick="closeUploadModal()"></div>
+        <div class="upload-modal-content">
+            <div class="upload-modal-header">
+                <h2>Select Reference Images</h2>
+                <button class="modal-close-btn" onclick="closeUploadModal()">✕</button>
+            </div>
+            
+            <div class="upload-modal-body">
+                <!-- Section 1: Drag and Drop Area -->
+                <div class="upload-dropzone" id="uploadDropzone">
+                    <div class="dropzone-content">
+                        <div class="dropzone-icon">📤</div>
+                        <p class="dropzone-text">Drop images here or click to upload</p>
+                        <p class="dropzone-subtext">PNG, JPG, WebP up to 5MB each</p>
+                        <input type="file" id="fileInput" multiple accept="image/png,image/jpeg,image/jpg,image/webp" style="display: none;">
+                        <button class="btn-choose-files" onclick="document.getElementById('fileInput').click()">
+                            <span>📁 Choose Files</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Section 2: Previously Uploaded -->
+                <div class="previously-uploaded-section">
+                    <h3 class="section-subtitle">Previously Uploaded (<span id="uploadedCount">4</span>)</h3>
+                    <div class="uploaded-images-grid" id="uploadedImagesGrid">
+                        <!-- Sample uploaded images -->
+                        <div class="uploaded-image-item" data-filename="image1.jpg" data-filesize="2.3 MB">
+                            <img src="assets/image1.jpg" alt="image1.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">image1.jpg</span>
+                                <span class="uploaded-filesize">2.3 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                        
+                        <div class="uploaded-image-item" data-filename="image2.jpg" data-filesize="1.8 MB">
+                            <img src="assets/image1.jpg" alt="image2.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">image2.jpg</span>
+                                <span class="uploaded-filesize">1.8 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                        
+                        <div class="uploaded-image-item" data-filename="image3.jpg" data-filesize="3.1 MB">
+                            <img src="assets/image1.jpg" alt="image3.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">image3.jpg</span>
+                                <span class="uploaded-filesize">3.1 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                        
+                        <div class="uploaded-image-item" data-filename="image4.jpg" data-filesize="2.7 MB">
+                            <img src="assets/image1.jpg" alt="image4.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">image4.jpg</span>
+                                <span class="uploaded-filesize">2.7 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3: Modal Footer -->
+            <div class="upload-modal-footer">
+                <button class="btn-modal-cancel" onclick="closeUploadModal()">Cancel</button>
+                <button class="btn-modal-confirm" onclick="useSelectedImages()">Use Selected (<span id="selectedCount">0</span>)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Image Viewer Modal -->
+    <div class="fullscreen-viewer-modal" id="fullscreenViewer" style="display: none;">
+        <div class="fullscreen-viewer-overlay" onclick="closeFullscreenViewer()"></div>
+        <button class="fullscreen-close-btn" onclick="closeFullscreenViewer()">✕</button>
+        
+        <div class="fullscreen-viewer-content">
+            <!-- Left Side: Image Display -->
+            <div class="fullscreen-image-section">
+                <img id="fullscreenImage" src="" alt="Full view">
+                <video id="fullscreenVideo" controls loop style="display: none;">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Right Side: Image Information -->
+            <div class="fullscreen-info-section">
+                <div class="fullscreen-info-content">
+                    <h3 class="fullscreen-info-title">Generation Details</h3>
+                    
+                    <div class="fullscreen-info-item">
+                        <span class="info-label">Model</span>
+                        <span class="info-value" id="fullscreenModel">Seedream 4</span>
+                    </div>
+                    
+                    <div class="fullscreen-info-item">
+                        <span class="info-label">Prompt</span>
+                        <p class="info-value" id="fullscreenPrompt">Futuristic cityscape with neon lights</p>
+                    </div>
+                    
+                    <div class="fullscreen-info-item">
+                        <span class="info-label">Generated</span>
+                        <span class="info-value" id="fullscreenDate">2 min ago</span>
+                    </div>
+                    
+                    <div class="fullscreen-info-item">
+                        <span class="info-label">Dimensions</span>
+                        <span class="info-value" id="fullscreenDimensions">1024×1024</span>
+                    </div>
+                    
+                    <div class="fullscreen-actions">
+                        <button class="fullscreen-action-btn" onclick="downloadFullscreenMedia()">
+                            <span>📥</span>
+                            <span>Download</span>
+                        </button>
+                        <button class="fullscreen-action-btn" onclick="shareFullscreenMedia()">
+                            <span>🔗</span>
+                            <span>Share Link</span>
+                        </button>
+                        <button class="fullscreen-action-btn delete" onclick="deleteFullscreenMedia()">
+                            <span>🗑️</span>
+                            <span>Delete</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frame Upload Modal (for Video Page) -->
+    <div class="upload-modal" id="frameUploadModal" style="display: none;">
+        <div class="upload-modal-overlay" onclick="closeFrameUploadModal()"></div>
+        <div class="upload-modal-content">
+            <div class="upload-modal-header">
+                <h2 id="frameModalTitle">Select Frame Image</h2>
+                <button class="modal-close-btn" onclick="closeFrameUploadModal()">✕</button>
+            </div>
+            
+            <div class="upload-modal-body">
+                <!-- Section 1: Drag and Drop Area -->
+                <div class="upload-dropzone" id="frameUploadDropzone">
+                    <div class="dropzone-content">
+                        <div class="dropzone-icon">🎬</div>
+                        <p class="dropzone-text">Drop image here or click to upload</p>
+                        <p class="dropzone-subtext">PNG, JPG, WebP up to 5MB • Single image only</p>
+                        <input type="file" id="frameFileInput" accept="image/png,image/jpeg,image/jpg,image/webp" style="display: none;">
+                        <button class="btn-choose-files" onclick="document.getElementById('frameFileInput').click()">
+                            <span>📁 Choose File</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Section 2: Previously Uploaded -->
+                <div class="previously-uploaded-section">
+                    <h3 class="section-subtitle">Previously Uploaded (<span id="frameUploadedCount">4</span>)</h3>
+                    <div class="uploaded-images-grid" id="frameUploadedImagesGrid">
+                        <!-- Sample uploaded images -->
+                        <div class="uploaded-image-item frame-selectable" data-filename="frame1.jpg" data-filesize="2.3 MB">
+                            <img src="assets/image1.jpg" alt="frame1.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">frame1.jpg</span>
+                                <span class="uploaded-filesize">2.3 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteFrameUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                        
+                        <div class="uploaded-image-item frame-selectable" data-filename="frame2.jpg" data-filesize="1.8 MB">
+                            <img src="assets/image1.jpg" alt="frame2.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">frame2.jpg</span>
+                                <span class="uploaded-filesize">1.8 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteFrameUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                        
+                        <div class="uploaded-image-item frame-selectable" data-filename="frame3.jpg" data-filesize="3.1 MB">
+                            <img src="assets/image1.jpg" alt="frame3.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">frame3.jpg</span>
+                                <span class="uploaded-filesize">3.1 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteFrameUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                        
+                        <div class="uploaded-image-item frame-selectable" data-filename="frame4.jpg" data-filesize="2.7 MB">
+                            <img src="assets/image1.jpg" alt="frame4.jpg">
+                            <div class="uploaded-image-info">
+                                <span class="uploaded-filename">frame4.jpg</span>
+                                <span class="uploaded-filesize">2.7 MB</span>
+                            </div>
+                            <button class="uploaded-delete-btn" onclick="deleteFrameUploadedImage(this)">🗑️</button>
+                            <div class="uploaded-selected-indicator">✓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3: Modal Footer -->
+            <div class="upload-modal-footer">
+                <button class="btn-modal-cancel" onclick="closeFrameUploadModal()">Cancel</button>
+                <button class="btn-modal-confirm" onclick="useSelectedFrame()">Use Selected</button>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="scripts/animations.js"></script>
     <script>
@@ -1040,6 +1491,459 @@
                 }
             });
         });
+    </script>
+    
+    <!-- Upload Modal Script -->
+    <script>
+        let selectedImages = new Set();
+        
+        // Open upload modal
+        document.getElementById('upload-images-btn')?.addEventListener('click', function() {
+            document.getElementById('uploadModal').style.display = 'flex';
+            selectedImages.clear();
+            updateSelectedCount();
+            updateUploadedItems();
+        });
+        
+        // Close upload modal
+        function closeUploadModal() {
+            document.getElementById('uploadModal').style.display = 'none';
+            selectedImages.clear();
+        }
+        
+        // Handle drag and drop
+        const dropzone = document.getElementById('uploadDropzone');
+        if (dropzone) {
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropzone.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropzone.addEventListener(eventName, () => {
+                    dropzone.classList.add('drag-over');
+                }, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropzone.addEventListener(eventName, () => {
+                    dropzone.classList.remove('drag-over');
+                }, false);
+            });
+            
+            dropzone.addEventListener('drop', handleDrop, false);
+            dropzone.addEventListener('click', () => {
+                document.getElementById('fileInput').click();
+            });
+        }
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+        
+        document.getElementById('fileInput')?.addEventListener('change', function(e) {
+            handleFiles(e.target.files);
+        });
+        
+        function handleFiles(files) {
+            // In a real implementation, you would upload files here
+            console.log('Files to upload:', files);
+            alert(`${files.length} file(s) selected for upload. In a real app, these would be uploaded to the server.`);
+        }
+        
+        // Handle uploaded image selection
+        document.addEventListener('click', function(e) {
+            const uploadedItem = e.target.closest('.uploaded-image-item');
+            if (uploadedItem && !e.target.closest('.uploaded-delete-btn')) {
+                const filename = uploadedItem.dataset.filename;
+                
+                if (selectedImages.has(filename)) {
+                    selectedImages.delete(filename);
+                    uploadedItem.classList.remove('selected');
+                } else {
+                    if (selectedImages.size < 5) {
+                        selectedImages.add(filename);
+                        uploadedItem.classList.add('selected');
+                    } else {
+                        alert('You can select up to 5 images maximum.');
+                    }
+                }
+                
+                updateSelectedCount();
+            }
+        });
+        
+        function updateSelectedCount() {
+            const countSpan = document.getElementById('selectedCount');
+            if (countSpan) {
+                countSpan.textContent = selectedImages.size;
+            }
+        }
+        
+        function updateUploadedItems() {
+            const items = document.querySelectorAll('.uploaded-image-item');
+            items.forEach(item => {
+                item.classList.remove('selected');
+            });
+        }
+        
+        function deleteUploadedImage(btn) {
+            if (confirm('Are you sure you want to delete this image?')) {
+                const item = btn.closest('.uploaded-image-item');
+                const filename = item.dataset.filename;
+                
+                selectedImages.delete(filename);
+                updateSelectedCount();
+                
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    item.remove();
+                    updateUploadedCount();
+                }, 300);
+            }
+        }
+        
+        function updateUploadedCount() {
+            const count = document.querySelectorAll('.uploaded-image-item').length;
+            document.getElementById('uploadedCount').textContent = count;
+        }
+        
+        function useSelectedImages() {
+            if (selectedImages.size === 0) {
+                alert('Please select at least one image.');
+                return;
+            }
+            
+            const container = document.getElementById('reference-images-container');
+            const grid = document.getElementById('reference-images-grid');
+            
+            // Clear existing thumbnails
+            grid.innerHTML = '';
+            
+            // Add selected images as thumbnails
+            selectedImages.forEach(filename => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'reference-thumbnail';
+                thumbnail.innerHTML = `
+                    <img src="assets/image1.jpg" alt="${filename}">
+                    <button class="reference-thumbnail-remove" onclick="removeReferenceThumbnail(this)">✕</button>
+                `;
+                grid.appendChild(thumbnail);
+            });
+            
+            // Show the container
+            container.style.display = 'block';
+            
+            // Close modal
+            closeUploadModal();
+        }
+        
+        function removeReferenceThumbnail(btn) {
+            const thumbnail = btn.closest('.reference-thumbnail');
+            thumbnail.style.opacity = '0';
+            thumbnail.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+                thumbnail.remove();
+                const grid = document.getElementById('reference-images-grid');
+                if (grid.children.length === 0) {
+                    document.getElementById('reference-images-container').style.display = 'none';
+                }
+            }, 200);
+        }
+    </script>
+    
+    <!-- Fullscreen Viewer Script -->
+    <script>
+        let currentMediaData = {};
+        
+        // Open fullscreen viewer for images
+        function openFullscreenViewer(imageSrc, prompt, model, date, isVideo = false) {
+            const modal = document.getElementById('fullscreenViewer');
+            const image = document.getElementById('fullscreenImage');
+            const video = document.getElementById('fullscreenVideo');
+            
+            currentMediaData = { imageSrc, prompt, model, date, isVideo };
+            
+            if (isVideo) {
+                image.style.display = 'none';
+                video.style.display = 'block';
+                video.querySelector('source').src = imageSrc;
+                video.load();
+            } else {
+                video.style.display = 'none';
+                image.style.display = 'block';
+                image.src = imageSrc;
+            }
+            
+            document.getElementById('fullscreenPrompt').textContent = prompt;
+            document.getElementById('fullscreenModel').textContent = model;
+            document.getElementById('fullscreenDate').textContent = date;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Close fullscreen viewer
+        function closeFullscreenViewer() {
+            const modal = document.getElementById('fullscreenViewer');
+            const video = document.getElementById('fullscreenVideo');
+            
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            
+            if (video.style.display === 'block') {
+                video.pause();
+            }
+        }
+        
+        // Download media
+        function downloadFullscreenMedia() {
+            const link = document.createElement('a');
+            link.href = currentMediaData.imageSrc;
+            link.download = currentMediaData.isVideo ? 'neonlights-video.mp4' : 'neonlights-image.jpg';
+            link.click();
+        }
+        
+        // Share media
+        function shareFullscreenMedia() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard!');
+        }
+        
+        // Delete media
+        function deleteFullscreenMedia() {
+            if (confirm('Are you sure you want to delete this generation?')) {
+                closeFullscreenViewer();
+                alert('Generation deleted successfully!');
+            }
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeFullscreenViewer();
+            }
+        });
+        
+        // Add click handlers to all generation items
+        document.addEventListener('click', function(e) {
+            const generationImage = e.target.closest('.generation-image');
+            if (generationImage && !e.target.closest('.action-btn')) {
+                const item = generationImage.closest('.generation-item');
+                const img = generationImage.querySelector('img');
+                const video = generationImage.querySelector('video');
+                const info = item.querySelector('.generation-info');
+                
+                if (info) {
+                    const prompt = info.querySelector('.generation-prompt')?.textContent || 'No prompt available';
+                    const metaSpans = info.querySelectorAll('.generation-meta span');
+                    const model = metaSpans[0]?.textContent || 'Unknown Model';
+                    const date = metaSpans[1]?.textContent || 'Unknown date';
+                    
+                    if (video) {
+                        openFullscreenViewer(video.querySelector('source').src, prompt, model, date, true);
+                    } else if (img) {
+                        openFullscreenViewer(img.src, prompt, model, date, false);
+                    }
+                }
+            }
+            
+            // Gallery page images
+            const galleryImage = e.target.closest('.gallery-image-container');
+            if (galleryImage && !e.target.closest('.gallery-btn')) {
+                const card = galleryImage.closest('.gallery-card');
+                const img = galleryImage.querySelector('.gallery-image');
+                const info = card.querySelector('.gallery-info');
+                
+                if (info && img) {
+                    const metaSpans = info.querySelectorAll('.gallery-meta span');
+                    const model = metaSpans[0]?.textContent || 'Unknown Model';
+                    const date = metaSpans[1]?.textContent || 'Unknown date';
+                    const prompt = 'Generated image from gallery'; // Gallery doesn't show prompts by default
+                    
+                    openFullscreenViewer(img.src, prompt, model, date, false);
+                }
+            }
+        });
+    </script>
+    
+    <!-- Frame Upload Script (Video Page) -->
+    <script>
+        let currentFrameType = ''; // 'start' or 'end'
+        let selectedFrameImage = null;
+        
+        // Open frame upload modal
+        document.getElementById('start-frame-btn')?.addEventListener('click', function() {
+            currentFrameType = 'start';
+            document.getElementById('frameModalTitle').textContent = 'Select Start Frame Image';
+            document.getElementById('frameUploadModal').style.display = 'flex';
+            selectedFrameImage = null;
+            updateFrameSelection();
+        });
+        
+        document.getElementById('end-frame-btn')?.addEventListener('click', function() {
+            currentFrameType = 'end';
+            document.getElementById('frameModalTitle').textContent = 'Select End Frame Image';
+            document.getElementById('frameUploadModal').style.display = 'flex';
+            selectedFrameImage = null;
+            updateFrameSelection();
+        });
+        
+        // Close frame upload modal
+        function closeFrameUploadModal() {
+            document.getElementById('frameUploadModal').style.display = 'none';
+            selectedFrameImage = null;
+        }
+        
+        // Handle drag and drop for frames
+        const frameDropzone = document.getElementById('frameUploadDropzone');
+        if (frameDropzone) {
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                frameDropzone.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            ['dragenter', 'dragover'].forEach(eventName => {
+                frameDropzone.addEventListener(eventName, () => {
+                    frameDropzone.classList.add('drag-over');
+                }, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                frameDropzone.addEventListener(eventName, () => {
+                    frameDropzone.classList.remove('drag-over');
+                }, false);
+            });
+            
+            frameDropzone.addEventListener('drop', handleFrameDrop, false);
+            frameDropzone.addEventListener('click', () => {
+                document.getElementById('frameFileInput').click();
+            });
+        }
+        
+        function handleFrameDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if (files.length > 0) {
+                handleFrameFiles([files[0]]); // Only take first file
+            }
+        }
+        
+        document.getElementById('frameFileInput')?.addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                handleFrameFiles([e.target.files[0]]); // Only take first file
+            }
+        });
+        
+        function handleFrameFiles(files) {
+            console.log('Frame file to upload:', files[0]);
+            alert(`File "${files[0].name}" selected. In a real app, this would be uploaded to the server.`);
+        }
+        
+        // Handle frame image selection (only 1 allowed)
+        document.addEventListener('click', function(e) {
+            const frameItem = e.target.closest('.frame-selectable');
+            if (frameItem && !e.target.closest('.uploaded-delete-btn')) {
+                const filename = frameItem.dataset.filename;
+                const imgSrc = frameItem.querySelector('img').src;
+                
+                // Deselect all others
+                document.querySelectorAll('.frame-selectable').forEach(item => {
+                    item.classList.remove('selected');
+                });
+                
+                // Select this one
+                frameItem.classList.add('selected');
+                selectedFrameImage = {
+                    filename: filename,
+                    src: imgSrc
+                };
+            }
+        });
+        
+        function updateFrameSelection() {
+            const items = document.querySelectorAll('.frame-selectable');
+            items.forEach(item => {
+                item.classList.remove('selected');
+            });
+        }
+        
+        function deleteFrameUploadedImage(btn) {
+            if (confirm('Are you sure you want to delete this image?')) {
+                const item = btn.closest('.uploaded-image-item');
+                
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    item.remove();
+                    updateFrameUploadedCount();
+                }, 300);
+            }
+        }
+        
+        function updateFrameUploadedCount() {
+            const count = document.querySelectorAll('#frameUploadedImagesGrid .uploaded-image-item').length;
+            document.getElementById('frameUploadedCount').textContent = count;
+        }
+        
+        function useSelectedFrame() {
+            if (!selectedFrameImage) {
+                alert('Please select an image.');
+                return;
+            }
+            
+            if (currentFrameType === 'start') {
+                const container = document.getElementById('start-frame-container');
+                const thumbnail = document.getElementById('start-frame-thumbnail');
+                
+                thumbnail.innerHTML = `
+                    <img src="${selectedFrameImage.src}" alt="${selectedFrameImage.filename}">
+                    <button class="frame-thumbnail-remove" onclick="removeFrameImage('start')">✕</button>
+                `;
+                container.style.display = 'block';
+                
+                // Enable End Frame button after Start Frame is set
+                const endFrameBtn = document.getElementById('end-frame-btn');
+                endFrameBtn.disabled = false;
+                endFrameBtn.classList.remove('disabled');
+                
+            } else if (currentFrameType === 'end') {
+                const container = document.getElementById('end-frame-container');
+                const thumbnail = document.getElementById('end-frame-thumbnail');
+                
+                thumbnail.innerHTML = `
+                    <img src="${selectedFrameImage.src}" alt="${selectedFrameImage.filename}">
+                    <button class="frame-thumbnail-remove" onclick="removeFrameImage('end')">✕</button>
+                `;
+                container.style.display = 'block';
+            }
+            
+            closeFrameUploadModal();
+        }
+        
+        function removeFrameImage(frameType) {
+            const container = document.getElementById(frameType + '-frame-container');
+            const thumbnail = document.getElementById(frameType + '-frame-thumbnail');
+            
+            thumbnail.innerHTML = '';
+            container.style.display = 'none';
+            
+            // If removing start frame, also disable and remove end frame
+            if (frameType === 'start') {
+                const endFrameBtn = document.getElementById('end-frame-btn');
+                endFrameBtn.disabled = true;
+                endFrameBtn.classList.add('disabled');
+                
+                // Also remove end frame if it exists
+                removeFrameImage('end');
+            }
+        }
     </script>
 </body>
 </html>
