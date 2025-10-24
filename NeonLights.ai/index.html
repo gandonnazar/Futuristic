@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonlights.ai - Command the Power of AI Creation</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* Single Page Application Styles */
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+        .nav-links a.active {
+            color: var(--primary-neon);
+            text-shadow: 0 0 20px var(--shadow-cyan);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Starfield Background -->
+    <div class="starfield" id="starfield"></div>
+    
+    <!-- Global Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="navigateTo('home')">NEONLIGHTS AI</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-page="home" onclick="navigateTo('home'); return false;">Home</a></li>
+                <li><a href="#image" class="nav-link" data-page="image" onclick="navigateTo('image'); return false;">Image</a></li>
+                <li><a href="#video" class="nav-link" data-page="video" onclick="navigateTo('video'); return false;">Video</a></li>
+                <li><a href="#upscale" class="nav-link" data-page="upscale" onclick="navigateTo('upscale'); return false;">Upscale</a></li>
+                <li><a href="#gallery" class="nav-link" data-page="gallery" onclick="navigateTo('gallery'); return false;">Gallery</a></li>
+                <li><a href="#pricing" class="nav-link" data-page="pricing" onclick="navigateTo('pricing'); return false;">Pricing</a></li>
+                <li><a href="#profile" class="nav-link" data-page="profile" onclick="navigateTo('profile'); return false;">Profile</a></li>
+            </ul>
+            <div class="auth-section">
+                <a href="#" class="btn-outline btn-sm">Log In</a>
+                <div class="profile-avatar">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9InVybCgjZ3JhZGllbnQwKSIvPgo8cGF0aCBkPSJNMjAgMTBDMTYuNjg2MyAxMCAxNCAxMi42ODYzIDE0IDE2QzE0IDE5LjMxMzcgMTYuNjg2MyAyMiAyMCAyMkMyMy4zMTM3IDIyIDI2IDE5LjMxMzcgMjYgMTZDMjYgMTIuNjg2MyAyMy4zMTM3IDEwIDIwIDEwWiIgZmlsbD0iIzAwZmZmZiIvPgo8cGF0aCBkPSJNMjAgMjRDMTQuNDc3MiAyNCAxMCAyOC40NzcyIDEwIDM0SDMwQzMwIDI4LjQ3NzIgMjUuNTIyOCAyNCAyMCAyNFoiIGZpbGw9IiMwMGZmZmYiLz4KPGRLZJ4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudDAiIHgxPSIwIiB5MT0iMCIgeDI9IjQwIiB5Mj0iNDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzAwZmZmZiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZjAwZmYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K" alt="Profile" />
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page-section active">
+        <!-- Hero Section -->
+        <section class="section" style="padding-top: 150px; min-height: 100vh; display: flex; align-items: center;">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="hero-title mb-3">NEONLIGHTS AI</h1>
+                    <p style="font-size: 1.5rem; color: var(--text-light); margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                        Generate the Future.
+                    </p>
+                    
+                    <div class="flex-center gap-3 mb-5" style="flex-wrap: wrap;">
+                        <a href="#" onclick="navigateTo('image')" class="neon-button cta-button">Launch Image Generator</a>
+                        <a href="#" onclick="navigateTo('video')" class="neon-button cta-button secondary">Create Video</a>
+                    </div>
+                </div>
+                
+                <!-- Floating Stats Panels -->
+                <div class="grid-3 mt-5">
+                    <div class="stat-card hologram">
+                        <div class="stat-number">400K</div>
+                        <div class="stat-label">Active Creators</div>
+                    </div>
+                    
+                    <div class="stat-card hologram" style="animation-delay: -2s;">
+                        <div class="stat-number">15K</div>
+                        <div class="stat-label">Images Generated</div>
+                    </div>
+                    
+                    <div class="stat-card hologram" style="animation-delay: -4s;">
+                        <div class="stat-number">3K</div>
+                        <div class="stat-label">Videos Rendered</div>
+                    </div>
+                    
+                    <div class="stat-card hologram" style="animation-delay: -1s;">
+                        <div class="stat-number">99.7%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <div class="container">
+                    <div class="text-center">
+                        <h2 style="font-size: 2rem; color: #ffffff; text-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.5);">
+                            Command the Power of AI Creation
+                        </h2>
+                    </div>
+                </div>
+
+
+        <!-- Parallax Section -->
+        <section class="parallax-section">
+            <div class="parallax-image" style="background-image: url('assets/interior.jpg');"></div>
+        </section>
+
+        <!-- Features Section -->
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="font-size: 2rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan);">
+                    Futuristic AI Capabilities
+                </h2>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    Experience the next generation of creative AI technology
+                </p>
+                </div>
+                <div class="grid-2 gap-3">
+                    <div class="glass-panel" style="padding: 40px;">
+                        <div class="flex mb-3">
+                            <div style="width: 60px; height: 60px; border: 2px solid var(--primary-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 0 20px var(--shadow-cyan);">
+                                <span style="font-size: 1.5rem;">🎨</span>
+                            </div>
+                            <div>
+                                <h3 style="color: var(--primary-neon); margin-bottom: 10px;">Ultra-HD Image Generation</h3>
+                                <p style="color: var(--text-light); line-height: 1.6;">
+                                    Create stunning 4K images with our advanced AI models. From photorealistic portraits to abstract art, unleash your creativity without limits.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-panel" style="padding: 40px;">
+                        <div class="flex mb-3">
+                            <div style="width: 60px; height: 60px; border: 2px solid var(--secondary-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 0 20px var(--shadow-magenta);">
+                                <span style="font-size: 1.5rem;">🎬</span>
+                            </div>
+                            <div>
+                                <h3 style="color: var(--secondary-neon); margin-bottom: 10px;">Cinematic Video Creation</h3>
+                                <p style="color: var(--text-light); line-height: 1.6;">
+                                    Generate professional-quality videos up to 12 seconds long. Perfect for social media, presentations, and creative projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-panel" style="padding: 40px;">
+                        <div class="flex mb-3">
+                            <div style="width: 60px; height: 60px; border: 2px solid var(--primary-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 0 20px var(--shadow-cyan);">
+                                <span style="font-size: 1.5rem;">🔮</span>
+                            </div>
+                            <div>
+                                <h3 style="color: var(--primary-neon); margin-bottom: 10px;">Advanced Upscaling</h3>
+                                <p style="color: var(--text-light); line-height: 1.6;">
+                                    Enhance any image up to 8x resolution with our AI upscaling technology. Transform low-res images into masterpieces.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section">
+            <div class="container">
+                <div class="glass-panel" style="padding: 60px; text-align: center;">
+                    <h2 style="font-size: 2.5rem; color: var(--text-white); margin-bottom: 20px;">
+                        Ready to Create the <span class="neon-text">Future</span>?
+                    </h2>
+                    <p style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Join thousands of creators who are already using NeonLights.ai to bring their wildest visions to life.
+                    </p>
+                    <div class="flex-center gap-2" style="flex-wrap: wrap;">
+                        <a href="#" onclick="navigateTo('pricing')" class="neon-button cta-button">Get Started Now</a>
+                        <a href="#" onclick="navigateTo('gallery')" class="neon-button secondary">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- IMAGE PAGE -->
+    <div id="image-page" class="page-section">
+    <!-- Main Content -->
+    <main style="padding-top: 120px;" class="section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 style="font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan); margin-bottom: 20px;">
+                    Neural Image Generation
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    Create stunning visuals with advanced AI models. From photorealistic portraits to abstract art.
+                </p>
+            </div>
+        </div>
+
+    <!-- AI Models Panel - Full Width Horizontal Grid -->
+    <section class="section" style="padding-top: 0; padding-bottom: 30px;">
+        <div class="container">
+            <div class="glass-card mb-4">
+                <h3 class="section-title mb-3">AI Models Panel</h3>
+                <div class="models-grid-horizontal">
+                    <div class="model-card active" data-model="seedream-4">
+                        <img src="assets/models/placeholder.jpg" alt="Seedream 4">
+                        <div class="model-name">Seedream 4</div>
+                    </div>
+                    <div class="model-card" data-model="imagineart-1">
+                        <img src="assets/models/placeholder.jpg" alt="ImagineArt-1">
+                        <div class="model-name">ImagineArt-1</div>
+                    </div>
+                    <div class="model-card" data-model="neonlights-retro">
+                        <img src="assets/models/placeholder.jpg" alt="Neonlights Retro">
+                        <div class="model-name">Neonlights Retro</div>
+                    </div>
+                    <div class="model-card" data-model="nano-banana">
+                        <img src="assets/models/placeholder.jpg" alt="Nano Banana">
+                        <div class="model-name">Nano Banana</div>
+                    </div>
+                    <div class="model-card" data-model="ideogram-character">
+                        <img src="assets/models/placeholder.jpg" alt="Ideogram Character">
+                        <div class="model-name">Ideogram Character</div>
+                    </div>
+                    <div class="model-card" data-model="qwen-image-edit">
+                        <img src="assets/models/placeholder.jpg" alt="Qwen Image Edit">
+                        <div class="model-name">Qwen Image Edit</div>
+                    </div>
+                    <div class="model-card" data-model="minimax-image-01">
+                        <img src="assets/models/placeholder.jpg" alt="Minimax Image-01">
+                        <div class="model-name">Minimax Image-01</div>
+                    </div>
+                    <div class="model-card" data-model="leonardo-phoenix">
+                        <img src="assets/models/placeholder.jpg" alt="Leonardo Phoenix 1.0">
+                        <div class="model-name">Leonardo Phoenix 1.0</div>
+                    </div>
+                    <div class="model-card" data-model="flux-dev">
+                        <img src="assets/models/placeholder.jpg" alt="Flux Dev">
+                        <div class="model-name">Flux Dev</div>
+                    </div>
+                    <div class="model-card" data-model="flux-pro-ultra">
+                        <img src="assets/models/placeholder.jpg" alt="Flux Pro1.1 Ultra">
+                        <div class="model-name">Flux Pro1.1 Ultra</div>
+                    </div>
+                    <div class="model-card" data-model="flux-kontext">
+                        <img src="assets/models/placeholder.jpg" alt="Flux Kontext Max">
+                        <div class="model-name">Flux Kontext Max</div>
+                    </div>
+                    <div class="model-card" data-model="ideogram-v3">
+                        <img src="assets/models/placeholder.jpg" alt="Ideogram v3 Quality">
+                        <div class="model-name">Ideogram v3 Quality</div>
+                    </div>
+                    <div class="model-card" data-model="google-imagen-4">
+                        <img src="assets/models/placeholder.jpg" alt="Google Imagen 4">
+                        <div class="model-name">Google Imagen 4</div>
+                    </div>
+                    <div class="model-card" data-model="google-imagen-4-ultra">
+                        <img src="assets/models/placeholder.jpg" alt="Google Imagen 4 Ultra">
+                        <div class="model-name">Google Imagen 4 Ultra</div>
+                    </div>
+                    <div class="model-card" data-model="luma-photon">
+                        <img src="assets/models/placeholder.jpg" alt="Luma Photon">
+                        <div class="model-name">Luma Photon</div>
+                    </div>
+                    <div class="model-card" data-model="recraft-v3">
+                        <img src="assets/models/placeholder.jpg" alt="Recraft V3">
+                        <div class="model-name">Recraft V3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="image-generation-layout">
+                <!-- Left Column: Generation Controls -->
+                <div class="generation-controls">
+
+                    <!-- Dimensional Matrix Panel -->
+                    <div class="glass-card mb-4">
+                        <h3 class="section-title mb-3">Dimensional Matrix</h3>
+                        <div class="dimension-selector-vertical">
+                            <div class="dimension-option active" data-ratio="1:1" data-size="1024x1024">
+                                <div class="ratio-preview square"></div>
+                                <div class="dimension-info">
+                                    <span>Square</span>
+                                </div>
+                            </div>
+                            <div class="dimension-option" data-ratio="16:9" data-size="1920x1080">
+                                <div class="ratio-preview landscape"></div>
+                                <div class="dimension-info">
+                                    <span>Landscape</span>
+                                </div>
+                            </div>
+                            <div class="dimension-option" data-ratio="9:16" data-size="1080x1920">
+                                <div class="ratio-preview portrait"></div>
+                                <div class="dimension-info">
+                                    <span>Portrait</span>
+                                </div>
+                            </div>
+                            <div class="dimension-option" data-ratio="4:3" data-size="1536x1152">
+                                <div class="ratio-preview classic"></div>
+                                <div class="dimension-info">
+                                    <span>Classic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prompt Input -->
+                    <div class="glass-card mb-4">
+                        <h3 class="section-title mb-3">Neural Prompt Interface</h3>
+                        <div class="prompt-container">
+                            <textarea id="prompt-input" class="prompt-input" placeholder="Describe your vision..."></textarea>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="prompt-action-buttons">
+                            <button class="btn-action-long" id="enhance-prompt-btn">
+                                <span>✨ Enhance Prompt</span>
+                            </button>
+                            <button class="btn-action-long" id="upload-images-btn">
+                                <span>📤 Upload Images</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <div class="generation-action">
+                        <button class="neon-button credits-display-btn" id="credits-display-btn">
+                            <span>Credits: 12,000</span>
+                        </button>
+                        <button class="neon-button generate-btn" id="generate-btn">
+                            <span class="btn-text">🚀 Generate <span style="color: #ff4444; font-size: 0.85em; margin-left: 5px;">-10</span></span>
+                            <span class="btn-loading" style="display: none;">⚡ Generating...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Recent Generations -->
+                <div class="recent-generations">
+                    <div class="glass-card">
+                        <h3 class="section-title mb-3">Recent Generations</h3>
+                        <div class="generations-grid" id="generations-grid">
+                            <!-- Placeholder generations -->
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <img src="assets/landscape.jpg" alt="Generated image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">Futuristic cityscape with neon lights</p>
+                                    <div class="generation-meta">
+                                        <span>Seedream 4</span>
+                                        <span>2 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <img src="assets/portrait1.jpg" alt="Generated image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">Abstract cosmic art with vibrant colors</p>
+                                    <div class="generation-meta">
+                                        <span>Leonardo Phoenix 1.0</span>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <img src="assets/square.jpg" alt="Generated image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">Cyberpunk warrior in digital rain</p>
+                                    <div class="generation-meta">
+                                        <span>Flux1.1 Pro Ultra</span>
+                                        <span>12 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="generation-item">
+                                <div class="generation-image">
+                                    <img src="assets/classic.jpg" alt="Generated image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">Anime character in fantasy landscape</p>
+                                    <div class="generation-meta">
+                                        <span>ImagineArt-1</span>
+                                        <span>18 min ago</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<br/>
+<br/>
+<br/>
+            <!-- Image Generation Tips -->
+            <div class="glass-panel" style="padding: 30px;">
+                <h3 style="color: var(--secondary-neon); margin-bottom: 20px; text-align: center;">
+                    🎯 Image Generation Mastery
+                </h3>
+                <div class="grid-3 gap-2">
+                    <div>
+                        <h4 style="color: var(--primary-neon); margin-bottom: 10px;">🎨 Prompt Crafting</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.5;">
+                            Be specific with details, lighting, style, and mood. Include artistic references and descriptive adjectives for best results.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-neon); margin-bottom: 10px;">⚡ Model Selection</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.5;">
+                            Flux Pro for ultra-quality, Seedream 4 for creative styles, Google Imagen 4 Ultra for photorealistic results.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent-neon); margin-bottom: 10px;">📐 Aspect Ratios</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.5;">
+                            Square for social media, Landscape for desktop wallpapers, Portrait for mobile screens and posters.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </main>
+    </div>
+
+    <!-- VIDEO PAGE -->
+    <div id="video-page" class="page-section">
+    <!-- Main Content -->
+    <main style="padding-top: 120px;" class="section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 style="font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan); margin-bottom: 20px;">
+                    Cinematic Video Rendering
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    Transform your ideas into stunning video content with AI precision
+                </p>
+            </div>
+
+            <!-- Video Generation Tips -->
+            <div class="glass-panel" style="padding: 30px;">
+                <h3 style="color: var(--secondary-neon); margin-bottom: 20px; text-align: center;">
+                    🎯 Video Generation Mastery
+                </h3>
+                <div class="grid-3 gap-2">
+                    <div>
+                        <h4 style="color: var(--primary-neon); margin-bottom: 10px;">🎨 Scene Description</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.5;">
+                            Describe movement, camera angles, and visual effects. Mention specific actions and transitions you want to see.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-neon); margin-bottom: 10px;">⚡ Model Performance</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.5;">
+                            CineMax Pro for ultra-quality, VideoForge for fast results, MotionCraft for smooth animations.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent-neon); margin-bottom: 10px;">⏱️ Duration Tips</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.5;">
+                            Shorter videos (4-6s) work best for detailed scenes. Longer videos (8-12s) are great for simple motions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <!-- UPSCALE PAGE -->
+    <div id="upscale-page" class="page-section">
+        <main style="padding-top: 120px;" class="section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 style="font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan); margin-bottom: 20px;">
+                    AI Image Enhancement
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    Transform low-resolution images into ultra-sharp masterpieces
+                </p>
+            </div>
+
+            <!-- Enhancement Guide -->
+            <div class="glass-panel" style="padding: 30px;">
+                <h3 style="color: var(--accent-neon); margin-bottom: 20px; text-align: center;">
+                    🔬 Enhancement Science
+                </h3>
+                <div class="grid-2 gap-3">
+                    <div>
+                        <h4 style="color: var(--primary-neon); margin-bottom: 15px;">🎯 Best Practices</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 20px;">
+                            <li>Use JPG/PNG formats for best results</li>
+                            <li>Images with clear subjects work better</li>
+                            <li>Avoid heavily compressed or artifacted images</li>
+                            <li>Face detection works best on clear portraits</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-neon); margin-bottom: 15px;">⚡ Model Performance</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 20px;">
+                            <li><strong>UltraSharp Pro:</strong> Best for photos and realistic images</li>
+                            <li><strong>ArtisticUpscale:</strong> Perfect for digital art and illustrations</li>
+                            <li><strong>PhotoPerfect:</strong> Ideal for face enhancement and portraits</li>
+                            <li><strong>FastScale:</strong> Quick results for simple upscaling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <!-- GALLERY PAGE -->
+    <div id="gallery-page" class="page-section">
+    <!-- Main Content -->
+    <main style="padding-top: 120px;" class="section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 style="font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan); margin-bottom: 20px;">
+                    Creative Gallery
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    Your AI-generated masterpieces collection
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Image Card 1 -->
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="assets/landscape.jpg" alt="Generated Image 1" class="gallery-image">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta">
+                            <span class="gallery-model">Flux Pro1.1 Ultra</span>
+                            <span class="gallery-timestamp">2 hours ago</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn" title="Download">
+                                <span>📥</span>
+                                <span class="gallery-btn-text">Download</span>
+                            </button>
+                            <button class="gallery-btn" title="Copy Prompt">
+                                <span>📋</span>
+                                <span class="gallery-btn-text">Copy Prompt</span>
+                            </button>
+                            <button class="gallery-btn gallery-btn-delete" title="Delete">
+                                <span>🗑️</span>
+                                <span class="gallery-btn-text">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 2 -->
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="assets/portrait1.jpg" alt="Generated Image 2" class="gallery-image">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta">
+                            <span class="gallery-model">Google Imagen 4 Ultra</span>
+                            <span class="gallery-timestamp">5 hours ago</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn" title="Download">
+                                <span>📥</span>
+                                <span class="gallery-btn-text">Download</span>
+                            </button>
+                            <button class="gallery-btn" title="Copy Prompt">
+                                <span>📋</span>
+                                <span class="gallery-btn-text">Copy Prompt</span>
+                            </button>
+                            <button class="gallery-btn gallery-btn-delete" title="Delete">
+                                <span>🗑️</span>
+                                <span class="gallery-btn-text">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 3 -->
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="assets/portrait2.jpg" alt="Generated Image 3" class="gallery-image">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta">
+                            <span class="gallery-model">Seedream 4</span>
+                            <span class="gallery-timestamp">1 day ago</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn" title="Download">
+                                <span>📥</span>
+                                <span class="gallery-btn-text">Download</span>
+                            </button>
+                            <button class="gallery-btn" title="Copy Prompt">
+                                <span>📋</span>
+                                <span class="gallery-btn-text">Copy Prompt</span>
+                            </button>
+                            <button class="gallery-btn gallery-btn-delete" title="Delete">
+                                <span>🗑️</span>
+                                <span class="gallery-btn-text">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 4 -->
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="assets/square.jpg" alt="Generated Image 4" class="gallery-image">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta">
+                            <span class="gallery-model">Ideogram v3 Quality</span>
+                            <span class="gallery-timestamp">2 days ago</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn" title="Download">
+                                <span>📥</span>
+                                <span class="gallery-btn-text">Download</span>
+                            </button>
+                            <button class="gallery-btn" title="Copy Prompt">
+                                <span>📋</span>
+                                <span class="gallery-btn-text">Copy Prompt</span>
+                            </button>
+                            <button class="gallery-btn gallery-btn-delete" title="Delete">
+                                <span>🗑️</span>
+                                <span class="gallery-btn-text">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 5 -->
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="assets/classic.jpg" alt="Generated Image 5" class="gallery-image">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta">
+                            <span class="gallery-model">Luma Photon</span>
+                            <span class="gallery-timestamp">3 days ago</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn" title="Download">
+                                <span>📥</span>
+                                <span class="gallery-btn-text">Download</span>
+                            </button>
+                            <button class="gallery-btn" title="Copy Prompt">
+                                <span>📋</span>
+                                <span class="gallery-btn-text">Copy Prompt</span>
+                            </button>
+                            <button class="gallery-btn gallery-btn-delete" title="Delete">
+                                <span>🗑️</span>
+                                <span class="gallery-btn-text">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 6 -->
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="assets/portrait2.jpg" alt="Generated Image 6" class="gallery-image">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta">
+                            <span class="gallery-model">Luma Photon</span>
+                            <span class="gallery-timestamp">3 days ago</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn" title="Download">
+                                <span>📥</span>
+                                <span class="gallery-btn-text">Download</span>
+                            </button>
+                            <button class="gallery-btn" title="Copy Prompt">
+                                <span>📋</span>
+                                <span class="gallery-btn-text">Copy Prompt</span>
+                            </button>
+                            <button class="gallery-btn gallery-btn-delete" title="Delete">
+                                <span>🗑️</span>
+                                <span class="gallery-btn-text">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Image Card 7 -->
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="assets/classic.jpg" alt="Generated Image 7" class="gallery-image">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta">
+                            <span class="gallery-model">Luma Photon</span>
+                            <span class="gallery-timestamp">3 days ago</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn" title="Download">
+                                <span>📥</span>
+                                <span class="gallery-btn-text">Download</span>
+                            </button>
+                            <button class="gallery-btn" title="Copy Prompt">
+                                <span>📋</span>
+                                <span class="gallery-btn-text">Copy Prompt</span>
+                            </button>
+                            <button class="gallery-btn gallery-btn-delete" title="Delete">
+                                <span>🗑️</span>
+                                <span class="gallery-btn-text">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Indicator (for infinite scroll) -->
+            <div class="gallery-loading" id="gallery-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p style="color: var(--text-light); margin-top: 15px;">Loading more images...</p>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <!-- PRICING PAGE -->
+    <div id="pricing-page" class="page-section">
+    <!-- Main Content -->
+    <main style="padding-top: 120px;" class="section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 style="font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan); margin-bottom: 20px;">
+                    Power Up Your Creativity
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    One-Time Credit Packs, Unlimited Possibilities
+                </p>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <!-- PROFILE PAGE -->
+    <div id="profile-page" class="page-section">
+    <!-- Main Content -->
+    <main style="padding-top: 120px;" class="section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 style="font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan); margin-bottom: 20px;">
+                    Operator Control Interface
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    Manage your account, view your payments, and track your AI journey
+                </p>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="social-icon">📱</a>
+                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">💼</a>
+                <a href="#" class="social-icon">📺</a>
+            </div>
+            <div class="copyright">
+                © 2025 NeonLights.ai - Commanding the Future of AI Creation
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">NEONLIGHTS AI</div>
+            <div class="loading-text">Initializing Neural Networks...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/animations.js"></script>
+    <script>
+        // Single Page Application Navigation
+        function navigateTo(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(pageName + '-page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page === pageName) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Update URL hash without page reload
+            history.pushState(null, '', '#' + pageName);
+        }
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function() {
+            const page = location.hash.slice(1) || 'home';
+            navigateTo(page);
+        });
+        
+        // Initialize navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize starfield
+            try {
+                const starfield = new SimpleStarField('starfield');
+                starfield.start();
+            } catch(e) {
+                // Starfield initialization failed, continue without it
+            }
+            
+            // Hide loading screen
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'none';
+                }
+            }, 1500);
+            
+            // Handle initial page load
+            const initialPage = location.hash.slice(1) || 'home';
+            if (initialPage !== 'home') {
+                navigateTo(initialPage);
+            }
+            
+            // Image Page - Model selection
+            document.querySelectorAll('.model-card:not(.disabled)').forEach(card => {
+                card.addEventListener('click', function() {
+                    document.querySelectorAll('.model-card').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Image Page - Dimension selection
+            document.querySelectorAll('.dimension-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('.dimension-option').forEach(o => o.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Image Page - Generate button
+            const generateBtn = document.getElementById('generate-btn');
+            if (generateBtn) {
+                generateBtn.addEventListener('click', function() {
+                    const btnText = this.querySelector('.btn-text');
+                    const btnLoading = this.querySelector('.btn-loading');
+                    
+                    btnText.style.display = 'none';
+                    btnLoading.style.display = 'inline';
+                    this.disabled = true;
+                    
+                    // Simulate generation
+                    setTimeout(() => {
+                        btnText.style.display = 'inline';
+                        btnLoading.style.display = 'none';
+                        this.disabled = false;
+                        
+                        // Add new generation to the grid
+                        const grid = document.getElementById('generations-grid');
+                        if (grid) {
+                            const newItem = document.createElement('div');
+                            newItem.className = 'generation-item';
+                            newItem.innerHTML = `
+                                <div class="generation-image">
+                                    <div class="placeholder-image">✨</div>
+                                </div>
+                                <div class="generation-info">
+                                    <p class="generation-prompt">New generation complete!</p>
+                                    <div class="generation-meta">
+                                        <span>Flux Pro</span>
+                                        <span>1024×1024</span>
+                                        <span>Just now</span>
+                                    </div>
+                                    <div class="generation-actions">
+                                        <button class="action-btn">📥</button>
+                                        <button class="action-btn">❤️</button>
+                                        <button class="action-btn">🔗</button>
+                                        <button class="action-btn">🗑️</button>
+                                    </div>
+                                </div>
+                            `;
+                            grid.insertBefore(newItem, grid.firstChild);
+                        }
+                    }, 3000);
+                });
+            }
+            
+            // Parallax scroll effect
+            const parallaxImage = document.querySelector('.parallax-image');
+            if (parallaxImage) {
+                window.addEventListener('scroll', function() {
+                    const scrolled = window.pageYOffset;
+                    const parallaxSection = document.querySelector('.parallax-section');
+                    
+                    if (parallaxSection) {
+                        const sectionTop = parallaxSection.offsetTop;
+                        const sectionHeight = parallaxSection.offsetHeight;
+                        
+                        // Only apply parallax when section is in viewport
+                        if (scrolled + window.innerHeight > sectionTop && scrolled < sectionTop + sectionHeight) {
+                            const offset = (scrolled - sectionTop) * 0.5;
+                            parallaxImage.style.transform = `translateY(${offset}px)`;
+                        }
+                    }
+                });
+            }
+
+            // Gallery infinite scroll
+            let isLoadingGallery = false;
+            let galleryPage = 1;
+            
+            function loadMoreGalleryImages() {
+                if (isLoadingGallery) return;
+                
+                const galleryLoading = document.getElementById('gallery-loading');
+                const galleryGrid = document.getElementById('gallery-grid');
+                
+                if (!galleryGrid) return;
+                
+                isLoadingGallery = true;
+                if (galleryLoading) galleryLoading.style.display = 'block';
+                
+                // Simulate loading more images (replace with actual API call later)
+                setTimeout(() => {
+                    // For demo purposes, we'll just show the loading indicator
+                    // In production, you would fetch and append new gallery items here
+                    
+                    if (galleryLoading) galleryLoading.style.display = 'none';
+                    isLoadingGallery = false;
+                    galleryPage++;
+                }, 1500);
+            }
+            
+            // Infinite scroll detection
+            window.addEventListener('scroll', function() {
+                const galleryPage = document.getElementById('gallery-page');
+                if (!galleryPage || !galleryPage.classList.contains('active')) return;
+                
+                const scrollPosition = window.innerHeight + window.pageYOffset;
+                const threshold = document.documentElement.scrollHeight - 500;
+                
+                if (scrollPosition >= threshold && !isLoadingGallery) {
+                    loadMoreGalleryImages();
+                }
+            });
+
+            // Gallery button actions
+            document.addEventListener('click', function(e) {
+                const btn = e.target.closest('.gallery-btn');
+                if (!btn) return;
+                
+                const card = btn.closest('.gallery-card');
+                const btnText = btn.querySelector('.gallery-btn-text')?.textContent || btn.textContent;
+                
+                if (btnText.includes('Download')) {
+                    // Download functionality
+                    const img = card.querySelector('.gallery-image');
+                    if (img) {
+                        const link = document.createElement('a');
+                        link.href = img.src;
+                        link.download = 'neonlights-generated-image.jpg';
+                        link.click();
+                    }
+                } else if (btnText.includes('Copy')) {
+                    // Copy prompt functionality
+                    navigator.clipboard.writeText('Sample prompt for this image');
+                    btn.style.background = 'rgba(0, 255, 0, 0.2)';
+                    setTimeout(() => {
+                        btn.style.background = '';
+                    }, 1000);
+                } else if (btnText.includes('Delete')) {
+                    // Delete functionality
+                    if (confirm('Are you sure you want to delete this image?')) {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.remove();
+                        }, 300);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
