@@ -1179,9 +1179,9 @@
                             <span>📥</span>
                             <span>Download</span>
                         </button>
-                        <button class="fullscreen-action-btn" onclick="shareFullscreenMedia()">
-                            <span>🔗</span>
-                            <span>Share Link</span>
+                        <button class="fullscreen-action-btn" onclick="copyFullscreenPrompt()">
+                            <span>�</span>
+                            <span>Copy Prompt</span>
                         </button>
                         <button class="fullscreen-action-btn delete" onclick="deleteFullscreenMedia()">
                             <span>🗑️</span>
@@ -1711,10 +1711,10 @@
             link.click();
         }
         
-        // Share media
-        function shareFullscreenMedia() {
-            navigator.clipboard.writeText(window.location.href);
-            alert('Link copied to clipboard!');
+        // Copy prompt to clipboard
+        function copyFullscreenPrompt() {
+            navigator.clipboard.writeText(currentMediaData.prompt);
+            alert('Prompt copied to clipboard!');
         }
         
         // Delete media
