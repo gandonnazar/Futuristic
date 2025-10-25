@@ -492,7 +492,7 @@
                         <div class="model-name">Kling 2.5 Turbo Pro</div>
                     </div>
                     <div class="model-card" data-model="minimax-helios-2">
-                        <img src="assets/models/minimax-helios-2.jpg" alt="Minimax Helios 2">
+                        <img src="assets/models/minimax-helios-2.png" alt="Minimax Helios 2">
                         <div class="model-name">Minimax Helios 2</div>
                     </div>
                     <div class="model-card" data-model="sora-2">
@@ -560,6 +560,14 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Video Duration Selector -->
+                    <div class="glass-card mb-4" id="video-duration-panel">
+                        <h3 class="section-title mb-3">⏱️ Video Duration</h3>
+                        <select class="duration-dropdown" id="duration-selector">
+                            <!-- Duration options will be dynamically inserted here -->
+                        </select>
                     </div>
 
                     <!-- Prompt Input -->
@@ -1273,6 +1281,7 @@
 
     <!-- JavaScript -->
     <script src="scripts/animations.js"></script>
+    <script src="scripts/video-duration.js"></script>
     <script>
         // Parallax Scroll Effect
         window.addEventListener('scroll', function() {
