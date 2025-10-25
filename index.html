@@ -39,7 +39,7 @@
             <div class="auth-section">
                 <a href="#" class="btn-outline btn-sm">Log In</a>
                 <div class="profile-avatar">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9InVybCgjZ3JhZGllbnQwKSIvPgo8cGF0aCBkPSJNMjAgMTBDMTYuNjg2MyAxMCAxNCAxMi42ODYzIDE0IDE2QzE0IDE5LjMxMzcgMTYuNjg2MyAyMiAyMCAyMkMyMy4zMTM3IDIyIDI2IDE5LjMxMzcgMjYgMTZDMjYgMTIuNjg2MyAyMy4zMTM3IDEwIDIwIDEwWiIgZmlsbD0iIzAwZmZmZiIvPgo8cGF0aCBkPSJNMjAgMjRDMTQuNDc3MiAyNCAxMCAyOC40NzcyIDEwIDM0SDMwQzMwIDI4LjQ3NzIgMjUuNTIyOCAyNCAyMCAyNFoiIGZpbGw9IiMwMGZmZmYiLz4KPGRLZJ4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudDAiIHgxPSIwIiB5MT0iMCIgeDI9IjQwIiB5Mj0iNDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzAwZmZmZiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZjAwZmYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K" alt="Profile" />
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9InVybCgjZ3JhZGllbnQwKSIvPgo8cGF0aCBkPSJNMjAgMTBDMTYuNjg2MyAxMCAxNCAxMi42ODYzIDE0IDE2QzE0IDE5LjMxMzcgMTYuNjg2MyAyMiAyMCAyMkMyMy4zMTM3IDIyIDI2IDE5LjMxMzcgMjYgMTZDMjYgMTIuNjg2MyAyMy4zMTM3IDEwIDIwIDEwWiIgZmlsbD0iIzAwZmZmZiIvPgo8cGF0aCBkPSJNMjAgMjRDMTQuNDc3MiAyNCAxMCAyOC40NzcyIDEwIDM0SDMwQzMwIDI4LjQ3NzIgMjUuNTIyOCAyNCAyMCAyNFoiIGZpbGw9IiMwMGZmZmYiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwIiB4MT0iMCIgeTE9IjAiIHgyPSI0MCIgeTI9IjQwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiMwMGZmZmYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmYwMGZmIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==" alt="Profile" />
                 </div>
             </div>
         </div>
@@ -741,7 +741,7 @@
 
     <!-- UPSCALE PAGE -->
     <div id="upscale-page" class="page-section">
-        <main style="padding-top: 120px;" class="section">
+        <main style="padding-top: 120px; padding-bottom: 60px;" class="section">
         <div class="container">
             <!-- Page Header -->
             <div class="text-center mb-5">
@@ -753,32 +753,248 @@
                 </p>
             </div>
 
-            <!-- Enhancement Guide -->
-            <div class="glass-panel" style="padding: 30px;">
-                <h3 style="color: var(--accent-neon); margin-bottom: 20px; text-align: center;">
-                    🔬 Enhancement Science
-                </h3>
-                <div class="grid-2 gap-3">
-                    <div>
-                        <h4 style="color: var(--primary-neon); margin-bottom: 15px;">🎯 Best Practices</h4>
-                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 20px;">
-                            <li>Use JPG/PNG formats for best results</li>
-                            <li>Images with clear subjects work better</li>
-                            <li>Avoid heavily compressed or artifacted images</li>
-                            <li>Face detection works best on clear portraits</li>
-                        </ul>
+            <!-- Main Upscale Containers -->
+            <div class="upscale-main-grid">
+                
+                <!-- Left Container: Image Upload -->
+                <div class="upscale-container upscale-upload-container">
+                    <div class="upscale-container-header">
+                        <h3 class="upscale-container-title">Upload Image</h3>
                     </div>
-                    <div>
-                        <h4 style="color: var(--secondary-neon); margin-bottom: 15px;">⚡ Model Performance</h4>
-                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 20px;">
-                            <li><strong>UltraSharp Pro:</strong> Best for photos and realistic images</li>
-                            <li><strong>ArtisticUpscale:</strong> Perfect for digital art and illustrations</li>
-                            <li><strong>PhotoPerfect:</strong> Ideal for face enhancement and portraits</li>
-                            <li><strong>FastScale:</strong> Quick results for simple upscaling</li>
-                        </ul>
+                    <div class="upscale-container-body">
+                        <!-- Drag and Drop Area -->
+                        <div class="upscale-dropzone" id="upscaleDropzone">
+                            <div class="upscale-dropzone-content">
+                                <div class="upscale-dropzone-icon">📤</div>
+                                <p class="upscale-dropzone-text">Drop image here or click to upload</p>
+                                <p class="upscale-dropzone-subtext">PNG, JPG, WebP up to 10MB</p>
+                                <input type="file" id="upscaleFileInput" accept="image/png,image/jpeg,image/jpg,image/webp" style="display: none;">
+                                <button class="upscale-btn-choose" onclick="document.getElementById('upscaleFileInput').click()">
+                                    <span>📁 Choose File</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Button -->
+                        <button class="upscale-confirm-btn" id="upscaleConfirmBtn">
+                            <span class="upscale-btn-icon">✓</span>
+                            Confirm Selection
+                        </button>
+
+                        <!-- Recently Uploaded Images -->
+                        <div class="upscale-recent-section">
+                            <h4 class="upscale-recent-title">Recently Uploaded</h4>
+                            <div class="upscale-recent-scroll-container">
+                                <div class="upscale-recent-grid" id="upscaleRecentGrid">
+                                    <!-- Sample recent images (showing more for demonstration) -->
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 1" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 2" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 3" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 4" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 5" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 6" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 7" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 8" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 9" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 10" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 11" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 12" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 13" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 14" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                    <div class="upscale-recent-item">
+                                        <img src="https://via.placeholder.com/150" alt="Recent 15" />
+                                        <div class="upscale-recent-overlay">✓</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Container: Settings & Controls -->
+                <div class="upscale-container upscale-settings-container">
+                    <div class="upscale-container-header">
+                        <h3 class="upscale-container-title">Model & Settings</h3>
+                    </div>
+                    <div class="upscale-container-body">
+                        
+                        <!-- Model Selector -->
+                        <div class="upscale-setting-group">
+                            <label class="upscale-label">Model</label>
+                            <div class="upscale-model-grid">
+                                <div class="upscale-model-option active" data-model="standard-v2">
+                                    <div class="upscale-model-icon">⚡</div>
+                                    <div class="upscale-model-name">Standard V2</div>
+                                </div>
+                                <div class="upscale-model-option" data-model="low-res-v2">
+                                    <div class="upscale-model-icon">🔍</div>
+                                    <div class="upscale-model-name">Low Resolution V2</div>
+                                </div>
+                                <div class="upscale-model-option" data-model="cgi">
+                                    <div class="upscale-model-icon">🎨</div>
+                                    <div class="upscale-model-name">CGI</div>
+                                </div>
+                                <div class="upscale-model-option" data-model="high-fidelity-v2">
+                                    <div class="upscale-model-icon">💎</div>
+                                    <div class="upscale-model-name">High Fidelity V2</div>
+                                </div>
+                                <div class="upscale-model-option" data-model="text-refine">
+                                    <div class="upscale-model-icon">📝</div>
+                                    <div class="upscale-model-name">Text Refine</div>
+                                </div>
+                                <div class="upscale-model-option disabled" data-model="topaz">
+                                    <div class="upscale-model-icon">✨</div>
+                                    <div class="upscale-model-name">Topaz Generative</div>
+                                    <div class="upscale-model-badge">Coming Soon</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Scale Factor -->
+                        <div class="upscale-setting-group">
+                            <label class="upscale-label">Scale Factor</label>
+                            <div class="upscale-scale-options">
+                                <button class="upscale-scale-btn active" data-scale="2">2x</button>
+                                <button class="upscale-scale-btn" data-scale="4">4x</button>
+                                <button class="upscale-scale-btn" data-scale="6">6x</button>
+                            </div>
+                        </div>
+
+                        <!-- Subject Detection -->
+                        <div class="upscale-setting-group">
+                            <label class="upscale-label">Subject Detection</label>
+                            <select class="upscale-select" id="subjectDetection">
+                                <option value="none">None</option>
+                                <option value="all">All</option>
+                                <option value="foreground">Foreground</option>
+                                <option value="background">Background</option>
+                            </select>
+                        </div>
+
+                        <!-- Face Enhancement Toggle -->
+                        <div class="upscale-setting-group">
+                            <label class="upscale-label">Face Enhancement</label>
+                            <div class="upscale-toggle-container">
+                                <label class="upscale-toggle">
+                                    <input type="checkbox" id="faceEnhancement">
+                                    <span class="upscale-toggle-slider"></span>
+                                </label>
+                                <span class="upscale-toggle-label">Off</span>
+                            </div>
+                        </div>
+
+                        <!-- Strength Slider -->
+                        <div class="upscale-setting-group">
+                            <label class="upscale-label">
+                                Strength
+                                <span class="upscale-value-display" id="strengthValue">80%</span>
+                            </label>
+                            <input type="range" class="upscale-slider" id="strengthSlider" min="0" max="100" value="80">
+                        </div>
+
+                        <!-- Creativity Slider -->
+                        <div class="upscale-setting-group">
+                            <label class="upscale-label">
+                                Creativity
+                                <span class="upscale-value-display" id="creativityValue">50%</span>
+                            </label>
+                            <input type="range" class="upscale-slider" id="creativitySlider" min="0" max="100" value="50">
+                        </div>
+
+                        <!-- Generate Button -->
+                        <button class="upscale-generate-btn">
+                            <span class="upscale-btn-icon">🚀</span>
+                            Upscale
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Warning/Attention Section -->
+            <div class="upscale-warning-section">
+                <div class="upscale-warning-content">
+                    <div class="upscale-warning-icon">⚠️</div>
+                    <div class="upscale-warning-text">
+                        <h4 class="upscale-warning-title">Important Notice</h4>
+                        <p class="upscale-warning-message">
+                            Upscaled images are <strong>not saved on the server</strong>. They will be permanently deleted when you refresh or leave this page. 
+                            Please <strong>download and save your upscaled images</strong> immediately after processing.
+                        </p>
                     </div>
                 </div>
             </div>
+
+            <!-- Results Container -->
+            <div class="upscale-results-container" id="upscaleResults">
+                <div class="upscale-container-header">
+                    <h3 class="upscale-container-title">Upscaled Result</h3>
+                </div>
+                <div class="upscale-container-body">
+                    <div class="upscale-result-content">
+                        <!-- Placeholder for result -->
+                        <div class="upscale-result-placeholder">
+                            <div class="upscale-placeholder-icon">🎯</div>
+                            <p class="upscale-placeholder-text">Your upscaled image will appear here</p>
+                            <p class="upscale-placeholder-subtext">Upload an image and click "Upscale" to begin</p>
+                        </div>
+                        
+                        <!-- Result image (hidden initially) -->
+                        <div class="upscale-result-image-container" style="display: none;">
+                            <img src="" alt="Upscaled Result" class="upscale-result-image" id="upscaleResultImage">
+                            <div class="upscale-result-actions">
+                                <button class="upscale-download-btn">
+                                    <span class="upscale-btn-icon">⬇️</span>
+                                    Download Image
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
     </div>
@@ -1333,16 +1549,50 @@
 
     <!-- Global Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="social-icons">
-                <a href="#" class="social-icon">📱</a>
-                <a href="#" class="social-icon">🐦</a>
-                <a href="#" class="social-icon">💼</a>
-                <a href="#" class="social-icon">📺</a>
+        <div class="footer-container">
+            <!-- Left Side: Branding -->
+            <div class="footer-branding">
+                <div class="footer-logo-container">
+                    <img src="assets/1024x1024.png" alt="NeonLights AI Logo" class="footer-logo-img" />
+                </div>
+                <div class="footer-brand-text">
+                    <h2 class="footer-brand-name">NEONLIGHTS AI</h2>
+                    <p class="footer-brand-tagline">Commanding the Future of AI Creation</p>
+                </div>
             </div>
-            <div class="copyright">
-                © 2025 NeonLights.ai - Commanding the Future of AI Creation
+
+            <!-- Center & Right: Links Sections -->
+            <div class="footer-links-container">
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-links-title">Quick Links</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#image" onclick="navigateTo('image'); return false;" class="footer-link">Image</a></li>
+                        <li><a href="#video" onclick="navigateTo('video'); return false;" class="footer-link">Video</a></li>
+                        <li><a href="#upscale" onclick="navigateTo('upscale'); return false;" class="footer-link">Upscale</a></li>
+                        <li><a href="#" class="footer-link">About</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-links-title">Legal</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Use</a></li>
+                        <li><a href="#" class="footer-link">Impressum</a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">
+                © 2025 NeonLights.ai - All Rights Reserved
+            </p>
         </div>
     </footer>
 
@@ -2314,6 +2564,148 @@
                 removeFrameImage('end');
             }
         }
+    </script>
+
+    <script>
+        // Upscale Page Functionality
+        
+        // Model selection
+        document.querySelectorAll('.upscale-model-option:not(.disabled)').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.upscale-model-option').forEach(opt => {
+                    opt.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Scale factor selection
+        document.querySelectorAll('.upscale-scale-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.upscale-scale-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Recent image selection (single selection)
+        document.querySelectorAll('.upscale-recent-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.upscale-recent-item').forEach(i => {
+                    i.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+
+        // Slider value updates
+        const strengthSlider = document.getElementById('strengthSlider');
+        const strengthValue = document.getElementById('strengthValue');
+        if (strengthSlider) {
+            strengthSlider.addEventListener('input', function() {
+                strengthValue.textContent = this.value + '%';
+            });
+        }
+
+        const creativitySlider = document.getElementById('creativitySlider');
+        const creativityValue = document.getElementById('creativityValue');
+        if (creativitySlider) {
+            creativitySlider.addEventListener('input', function() {
+                creativityValue.textContent = this.value + '%';
+            });
+        }
+
+        // Face Enhancement toggle label update
+        const faceEnhancement = document.getElementById('faceEnhancement');
+        if (faceEnhancement) {
+            faceEnhancement.addEventListener('change', function() {
+                const label = this.closest('.upscale-toggle-container').querySelector('.upscale-toggle-label');
+                label.textContent = this.checked ? 'On' : 'Off';
+            });
+        }
+
+        // Drag and drop for upscale
+        const upscaleDropzone = document.getElementById('upscaleDropzone');
+        const upscaleFileInput = document.getElementById('upscaleFileInput');
+
+        if (upscaleDropzone) {
+            upscaleDropzone.addEventListener('click', function() {
+                upscaleFileInput.click();
+            });
+
+            upscaleDropzone.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.style.borderColor = 'var(--primary-neon)';
+                this.style.background = 'rgba(0, 255, 255, 0.1)';
+            });
+
+            upscaleDropzone.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                this.style.borderColor = 'rgba(0, 255, 255, 0.4)';
+                this.style.background = 'rgba(0, 0, 0, 0.2)';
+            });
+
+            upscaleDropzone.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.style.borderColor = 'rgba(0, 255, 255, 0.4)';
+                this.style.background = 'rgba(0, 0, 0, 0.2)';
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    handleUpscaleFile(files[0]);
+                }
+            });
+        }
+
+        if (upscaleFileInput) {
+            upscaleFileInput.addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    handleUpscaleFile(this.files[0]);
+                }
+            });
+        }
+
+        function handleUpscaleFile(file) {
+            if (file.type.startsWith('image/')) {
+                console.log('File uploaded:', file.name);
+                // Here you would handle the file upload
+                // For now, just show a confirmation
+                alert('Image uploaded: ' + file.name);
+            } else {
+                alert('Please upload an image file (PNG, JPG, or WebP)');
+            }
+        }
+
+        // Upscale button click handler
+        document.querySelector('.upscale-generate-btn')?.addEventListener('click', function() {
+            console.log('Upscaling image...');
+            // Here you would trigger the upscale process
+            // For demonstration, show a result after 2 seconds
+            setTimeout(() => {
+                document.querySelector('.upscale-result-placeholder').style.display = 'none';
+                const resultContainer = document.querySelector('.upscale-result-image-container');
+                resultContainer.style.display = 'block';
+                
+                // Set a sample result image
+                document.getElementById('upscaleResultImage').src = 'https://via.placeholder.com/800x600';
+                
+                // Scroll to results
+                document.getElementById('upscaleResults').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        });
+
+        // Download button
+        document.querySelector('.upscale-download-btn')?.addEventListener('click', function() {
+            const img = document.getElementById('upscaleResultImage');
+            if (img.src) {
+                // Create download link
+                const link = document.createElement('a');
+                link.href = img.src;
+                link.download = 'upscaled-image.png';
+                link.click();
+            }
+        });
     </script>
 </body>
 </html>
