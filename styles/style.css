@@ -1095,7 +1095,7 @@ h1, h2, h3, h4, h5, h6 {
 .dimension-selector-vertical {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 8px;
 }
 
 .dimension-selector {
@@ -1108,11 +1108,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 12px 10px;
+  gap: 6px;
+  padding: 10px 8px;
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid transparent;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
@@ -1130,31 +1130,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ratio-preview {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   background: var(--primary-neon);
   border-radius: 4px;
   flex-shrink: 0;
 }
 
 .ratio-preview.square {
-  width: 28px;
-  height: 28px;
-}
-
-.ratio-preview.landscape {
-  width: 40px;
+  width: 22px;
   height: 22px;
 }
 
+.ratio-preview.landscape {
+  width: 32px;
+  height: 18px;
+}
+
 .ratio-preview.portrait {
-  width: 18px;
-  height: 32px;
+  width: 14px;
+  height: 26px;
 }
 
 .ratio-preview.classic {
-  width: 36px;
-  height: 27px;
+  width: 28px;
+  height: 21px;
 }
 
 .dimension-info {
@@ -1167,13 +1167,13 @@ h1, h2, h3, h4, h5, h6 {
 .dimension-option span {
   font-weight: 600;
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-bottom: 2px;
 }
 
 .dimension-option small {
   color: var(--primary-neon);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 
 /* Prompt Interface */
@@ -1441,10 +1441,6 @@ h1, h2, h3, h4, h5, h6 {
   
   .models-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .dimension-selector-vertical {
-    grid-template-columns: repeat(2, 1fr);
   }
   
   .dimension-selector {
