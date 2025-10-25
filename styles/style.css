@@ -1306,51 +1306,72 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   justify-self: stretch;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(138, 43, 226, 0.1));
 }
 
 .generate-btn::before {
   content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #00d4ff;
-  border-radius: 50%;
-  box-shadow: 
-    0 0 8px #00d4ff,
-    0 0 16px #00d4ff,
-    0 0 24px #00d4ff,
-    0 0 32px rgba(0, 212, 255, 0.5);
-  animation: pulsarTravel 3s linear infinite;
-  z-index: 10;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    transparent,
+    rgba(0, 255, 255, 0.8),
+    rgba(0, 212, 255, 1),
+    rgba(0, 255, 255, 0.8),
+    transparent,
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: energySweep 2s linear infinite;
+  border-radius: inherit;
+  z-index: -1;
 }
 
-@keyframes pulsarTravel {
+.generate-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes energySweep {
   0% {
-    top: -4px;
-    left: -4px;
-    opacity: 1;
-  }
-  25% {
-    top: -4px;
-    left: calc(100% + 4px);
-    opacity: 1;
-  }
-  50% {
-    top: calc(100% + 4px);
-    left: calc(100% + 4px);
-    opacity: 1;
-  }
-  75% {
-    top: calc(100% + 4px);
-    left: -4px;
-    opacity: 1;
+    background-position: -200% 0;
   }
   100% {
-    top: -4px;
-    left: -4px;
-    opacity: 1;
+    background-position: 200% 0;
   }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 200%;
+  }
+  100% {
+    background-position: -200% -200%;
+  }
+}
+
+.generate-btn:hover::before {
+  animation-duration: 1s;
+}
+
+.generate-btn:hover::after {
+  animation-duration: 1.5s;
 }
 
 .credits-display-btn {
