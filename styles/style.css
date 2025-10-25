@@ -1117,10 +1117,22 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     grid-column: 1;
     grid-row: 1;
+    gap: 8px;
+  }
+
+  .logo-image-container {
+    width: 35px;
+    height: 35px;
+    border: 1.5px solid var(--primary-neon);
+    box-shadow: 0 0 10px var(--shadow-cyan);
+  }
+
+  .logo-text {
+    font-size: 1rem;
   }
   
   .auth-section {
-    gap: 10px;
+    gap: 8px;
     grid-column: 3;
     grid-row: 1;
     display: flex;
@@ -1169,13 +1181,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .btn-sm {
-    padding: 6px 12px;
-    font-size: 0.75rem;
+    padding: 5px 10px;
+    font-size: 0.7rem;
   }
   
   .profile-avatar {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
   
   .credits-display {
