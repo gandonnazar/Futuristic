@@ -1359,6 +1359,46 @@
                     See exactly how many generations you can create with each plan based on actual model costs
                 </p>
             </div>
+
+            <!-- Plan Selector -->
+            <div class="calculator-section">
+                <div class="calculator-plan-selector">
+                    <label for="plan-select" class="plan-select-label">Select Plan:</label>
+                    <select id="plan-select" class="plan-select-dropdown">
+                        <option value="starter" selected>Starter</option>
+                        <option value="pro">Pro</option>
+                        <option value="ultimate">Ultimate</option>
+                    </select>
+                </div>
+
+                <div class="calculator-credits-info">
+                    <p id="credits-info-text" class="credits-info-text">Your Starter plan includes 600 credits</p>
+                </div>
+
+                <!-- Calculator Containers -->
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <h3 class="calculator-card-title">Image Generation</h3>
+                        <div class="calculator-card-content">
+                            <!-- Content will be added later -->
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3 class="calculator-card-title">Video Generation</h3>
+                        <div class="calculator-card-content">
+                            <!-- Content will be added later -->
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3 class="calculator-card-title">Other Features</h3>
+                        <div class="calculator-card-content">
+                            <!-- Content will be added later -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     </div>
@@ -2111,6 +2151,27 @@
                 }
             });
         });
+
+            // Pricing Calculator Plan Selector
+            const planSelect = document.getElementById('plan-select');
+            const creditsInfoText = document.getElementById('credits-info-text');
+            
+            const planData = {
+                starter: { credits: 600, name: 'Starter' },
+                pro: { credits: 1900, name: 'Pro' },
+                ultimate: { credits: 12000, name: 'Ultimate' }
+            };
+
+            if (planSelect && creditsInfoText) {
+                planSelect.addEventListener('change', function() {
+                    const selectedPlan = this.value;
+                    const plan = planData[selectedPlan];
+                    
+                    if (plan) {
+                        creditsInfoText.textContent = `Your ${plan.name} plan includes ${plan.credits.toLocaleString()} credits`;
+                    }
+                });
+            }
     </script>
     
     <!-- Upload Modal Script -->
