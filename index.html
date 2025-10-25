@@ -26,7 +26,12 @@
     <!-- Global Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="navigateTo('home')">NEONLIGHTS AI</div>
+            <div class="logo" onclick="navigateTo('home')">
+                <div class="logo-image-container">
+                    <img src="assets/128x128.png" alt="NeonLights AI Logo" class="logo-image">
+                </div>
+                <span class="logo-text">NEONLIGHTS AI</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link active" data-page="home" onclick="navigateTo('home'); return false;">Home</a></li>
                 <li><a href="#image" class="nav-link" data-page="image" onclick="navigateTo('image'); return false;">Image</a></li>
@@ -1587,6 +1592,29 @@
     </main>
     </div>
 
+    <!-- ABOUT PAGE -->
+    <div id="about-page" class="page-section">
+    <!-- Main Content -->
+    <main style="padding-top: 120px;" class="section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 style="font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 30px var(--shadow-cyan); margin-bottom: 20px;">
+                    About NeonLights AI
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                    Discover our mission and vision
+                </p>
+            </div>
+
+            <!-- Empty Container -->
+            <div class="about-container glass-panel" style="padding: 60px; min-height: 500px;">
+                <!-- Content will be added here -->
+            </div>
+        </div>
+    </main>
+    </div>
+
     <!-- Global Footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -1610,7 +1638,7 @@
                         <li><a href="#image" onclick="navigateTo('image'); return false;" class="footer-link">Image</a></li>
                         <li><a href="#video" onclick="navigateTo('video'); return false;" class="footer-link">Video</a></li>
                         <li><a href="#upscale" onclick="navigateTo('upscale'); return false;" class="footer-link">Upscale</a></li>
-                        <li><a href="#" class="footer-link">About</a></li>
+                        <li><a href="#about" onclick="navigateTo('about'); return false;" class="footer-link">About</a></li>
                         <li><a href="#" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
@@ -1943,10 +1971,40 @@
             }
             
             // Image Page - Model selection
+            const imageModelCosts = {
+                'seedream-4': 10,
+                'imagineart-1': 15,
+                'neonlights-retro': 8,
+                'nano-banana': 24,
+                'hunyuan-image-3': 8,
+                'wan-2': 6,
+                'minimax-image-01': 5,
+                'leonardo-phoenix': 24,
+                'flux-dev': 8,
+                'flux-pro-ultra': 24,
+                'flux-kontext': 30,
+                'ideogram-v3': 32,
+                'google-imagen-4': 24,
+                'google-imagen-4-ultra': 48,
+                'luma-photon': 10,
+                'recraft-v3': 13
+            };
+
             document.querySelectorAll('.model-card:not(.disabled)').forEach(card => {
                 card.addEventListener('click', function() {
                     document.querySelectorAll('.model-card').forEach(c => c.classList.remove('active'));
                     this.classList.add('active');
+                    
+                    // Update credit cost on generate button
+                    const modelName = this.getAttribute('data-model');
+                    const cost = imageModelCosts[modelName] || 10;
+                    const generateBtn = document.getElementById('generate-btn');
+                    if (generateBtn) {
+                        const costDisplay = generateBtn.querySelector('.btn-text span');
+                        if (costDisplay) {
+                            costDisplay.textContent = `-${cost}`;
+                        }
+                    }
                 });
             });
 
