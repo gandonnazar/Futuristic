@@ -1419,6 +1419,57 @@
                     }, 3000);
                 });
             }
+
+            // Video Page - Render button
+            const videoPage = document.getElementById('video-page');
+            if (videoPage) {
+                const videoRenderBtn = videoPage.querySelector('#generate-btn');
+                if (videoRenderBtn) {
+                    videoRenderBtn.addEventListener('click', function() {
+                        const btnText = this.querySelector('.btn-text');
+                        const btnLoading = this.querySelector('.btn-loading');
+                        
+                        btnText.style.display = 'none';
+                        btnLoading.style.display = 'inline';
+                        this.disabled = true;
+                        
+                        // Simulate video rendering
+                        setTimeout(() => {
+                            btnText.style.display = 'inline';
+                            btnLoading.style.display = 'none';
+                            this.disabled = false;
+                            
+                            // Add new video generation to the grid
+                            const videoGrid = document.getElementById('video-generations-grid');
+                            if (videoGrid) {
+                                const newItem = document.createElement('div');
+                                newItem.className = 'generation-item';
+                                newItem.innerHTML = `
+                                    <div class="generation-image">
+                                        <video controls loop style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                                            <source src="assets/portrait.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="generation-info">
+                                        <p class="generation-prompt">New video generation complete!</p>
+                                        <div class="generation-meta">
+                                            <span>Video Model</span>
+                                            <span>Just now</span>
+                                        </div>
+                                        <div class="generation-actions">
+                                            <button class="action-btn">📥</button>
+                                            <button class="action-btn">🔗</button>
+                                            <button class="action-btn">🗑️</button>
+                                        </div>
+                                    </div>
+                                `;
+                                videoGrid.insertBefore(newItem, videoGrid.firstChild);
+                            }
+                        }, 3000);
+                    });
+                }
+            }
             
             // Parallax scroll effect
             const parallaxImage = document.querySelector('.parallax-image');
